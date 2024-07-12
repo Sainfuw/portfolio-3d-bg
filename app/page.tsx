@@ -1,7 +1,11 @@
+import dynamic from "next/dynamic";
+
+const Scene = dynamic(() => import("./components/Scene"), { ssr: false });
+
 export default function Home() {
   return (
-    <main className="flex flex-grow justify-center items-center">
-      <h1>Hello</h1>
+    <main className="flex-grow">
+      <Scene />
     </main>
   );
 }
